@@ -42,3 +42,17 @@ Route::get('/test', function() {
     return view('teste');
 });
 ```
+
+# Aula 22
+
+## 1. Cria model e migration para usuário(user)
+
+````
+php artisan make:model User -m
+````
+
+## 2. Cria model e migration para empresa(company)
+
+````
+php artisan make:model Company -m
+````
