@@ -56,3 +56,9 @@ php artisan make:model User -m
 ````
 php artisan make:model Company -m
 ````
+
+## 2. Cria model e migration para fila(queue)
+
+````
+php artisan make:model Queue -m
+````
