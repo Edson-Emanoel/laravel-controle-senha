@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('companies', function (Blueprint $table) {
+        Schema::create('queue_tickets', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name', 100)->unique();
-            $table->string('company_logo', 255)->nullable();
-            $table->uuid('uuid')->unique();
-            $table->string('address', 255)->nullable();
-            $table->string('phone', 20)->nullable();
-            $table->string('email', 100)->nullable();
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->integer('id_queue')->index();
+            $table->integer('queue_ticket_number')->nullable();
+            $table->dateTime('queue_ticket_created_at')->useCurrent();
+            $table->dateTime('queue_ticket_called_at')->nullable();
+            $table->enum('queue_ticket_status', ['waiting', 'calling', 'not_attended', 'dismissed'])->default('waiting');
+            $table->strkng('queue_ticket_called_by', 50)->nullable();
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->dateTime('deleted_at')->nullable()->default(null);
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('companies');
+        Schema::dropIfExists('queue_tickets');
     }
 };

@@ -45,20 +45,36 @@ Route::get('/test', function() {
 
 # Aula 22
 
-## 1. Cria model e migration para usuário(user)
+## Cria model e migration para usuário(user)
 
 ````
 php artisan make:model User -m
 ````
 
-## 2. Cria model e migration para empresa(company)
+# Aula 23
+
+## Cria model e migration para empresa(company)
 
 ````
 php artisan make:model Company -m
 ````
 
-## 2. Cria model e migration para fila(queue)
+# Aula 24
+
+## Cria model e migration para fila(queue)
 
 ````
 php artisan make:model Queue -m
 ````
+
+# Aula 25
+
+## Cria model e migration para fila(queue)
+
+````
+php artisan make:model QueueTicket -m
+````
+
+# Aula 26
+
+## 
