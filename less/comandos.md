@@ -141,3 +141,7 @@ php artisan make:seeder CompanySeeder
 ````
 php artisan db:seed --class=CompanySeeder
 ````
+
+## Aula 30 - Criando pagina Layout para Visitantes(Guests)
+
+### Comando para criar o componente `php artisan make:component layouts.guest-layout --view`
