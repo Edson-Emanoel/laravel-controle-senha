@@ -43,7 +43,7 @@ Route::get('/test', function() {
 });
 ```
 
-# Aula 22
+# Aula 22 - Criando a migration e model para o Empresas
 
 ## Cria model e migration para usuário(user)
 
@@ -51,7 +51,7 @@ Route::get('/test', function() {
 php artisan make:model User -m
 ````
 
-# Aula 23
+# Aula 23 - Criando a migration e model para o Empresas
 
 ## Cria model e migration para empresa(company)
 
@@ -59,7 +59,7 @@ php artisan make:model User -m
 php artisan make:model Company -m
 ````
 
-# Aula 24
+# Aula 24 - Criando a migration e model para a Fila
 
 ## Cria model e migration para fila(queue)
 
@@ -67,14 +67,46 @@ php artisan make:model Company -m
 php artisan make:model Queue -m
 ````
 
-# Aula 25
+# Aula 25 - Criando a migration e model para o Ticket da Fila
 
-## Cria model e migration para fila(queue)
+## Cria model e migration para o ticket da fila(queue ticket)
 
 ````
 php artisan make:model QueueTicket -m
 ````
 
-# Aula 26
+# Aula 27 - Executando as migrations
 
-## 
+## Comando para rodar as migrations
+
+````
+php artisan migrate
+````
+
+# Aula 28 - Seeders Parte 1 (UserSeeder)
+
+## Comando para criar o Seeder para User
+
+````
+php artisan make:seeder UserSeeder
+````
+
+## Comando para rodar o UserSeeder
+
+````
+php artisan db:seed --class=UserSeeder
+````
+
+# Aula 28 - Seeders Parte 2 (Empresas)
+
+## Comando para criar o Seeder para Company
+
+````
+php artisan make:seeder CompanySeeder
+````
+
+## Comando para rodar o CompanySeeder
+
+````
+php artisan db:seed --class=CompanySeeder
+````
